@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Ôn Tập Không Dây</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f2f2f2;
+    }
+
+    .question-box {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .answers div {
+        background: #e8e8e8;
+        padding: 10px;
+        margin: 6px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .correct-highlight {
+        background: yellow;
+    }
+
+    .right {
+        background: lightgreen !important;
+    }
+
+    .wrong {
+        background: #ff6b6b !important;
+    }
+</style>
+</head>
+<body>
+
+<h2>Quiz Ôn Tập Mạng Không Dây – Tự Động Tải 54 Câu</h2>
+<p>Nhấp vào đáp án để kiểm tra đúng sai</p>
+
+<div style="margin-bottom: 15px;">
+  <button id="shuffleBtn" style="background: #ff9800; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 14px;">🔀 Đánh Tráo Câu Hỏi</button>
+  <button id="resetBtn" style="background: #2196F3; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 14px; margin-left: 10px;">🔄 Làm Mới</button>
+</div>
+
+<div id="quiz-container"></div>
+
+<script src="question.js"></script>
+
+<script src="question.js"></script>
+
+<script>
+// Hàm trộn mảng (Fisher-Yates shuffle)
+function shuffleArray(array) {
+    let arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+// Render câu hỏi
+function renderQuiz() {
+    const container = document.getElementById("quiz-container");
+    container.innerHTML = ''; // Xóa nội dung cũ
+    
+    quizData.forEach((q, index) => {
+        let html = `
+            <div class="question-box">
+                <b>Câu ${index+1}: ${q.question}</b>
+        `;
+
+        // Thêm hình ảnh nếu có
+        if (q.image) {
+            html += `<div style="margin: 10px 0;"><img src="${q.image}" style="max-width: 100%; height: auto; border-radius: 6px;" onerror="this.parentElement.innerHTML += '<p style=color:red;>Không tìm thấy: ${q.image}</p>'"></div>`;
+        }
+
+        html += `<div class="answers">`;
+
+        q.answers.forEach((ans, idx) => {
+            const highlight = (idx === q.correctIndex) ? "correct-highlight" : "";
+            html += `
+                <div class="${highlight}" data-correct="${idx === q.correctIndex}">
+                    ${ans}
+                </div>
+            `;
+        });
+
+        html += `</div></div>`;
+        container.innerHTML += html;
+    });
+
+    // Xử lý click
+    document.querySelectorAll(".answers div").forEach(el => {
+        el.addEventListener("click", function() {
+            if (this.classList.contains("right") || this.classList.contains("wrong")) {
+                this.classList.remove("right");
+                this.classList.remove("wrong");
+                return;
+            }
+            
+            if (this.dataset.correct === "true") {
+                this.classList.add("right");
+            } else {
+                this.classList.add("wrong");
+            }
+        });
+    });
+}
+
+// Nút đánh tráo
+document.getElementById('shuffleBtn').addEventListener('click', function() {
+    quizData = shuffleArray(quizData);
+    renderQuiz();
+});
+
+// Nút làm mới
+document.getElementById('resetBtn').addEventListener('click', function() {
+    document.querySelectorAll(".answers div").forEach(el => {
+        el.classList.remove("right", "wrong");
+    });
+});
+
+// Render lần đầu
+renderQuiz();
+</script>
+
+</body>
+</html>
