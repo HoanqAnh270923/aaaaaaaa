@@ -170,7 +170,7 @@ const quizData = [
     },
     {
         id: 16,
-        question: "Mệnh đề nào mô tả sai về vấn đề Trạm ẩn?",
+        question: "Mệnh đề nào mô tả sai về vấn đề Trạm lộ?",
         answers: [
             "a. Việc C phát tin cho D, nếu diễn ra, sẽ không ảnh hưởng tới việc B truyền cho A",
             "b. Vùng phủ sóng của B không chứa D, vì vậy tín hiệu của B không thể gây ra xung đột tại D",
@@ -607,4 +607,5 @@ const quizData = [
         correctIndex: 0
     }
 ];
+
 
