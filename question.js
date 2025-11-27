@@ -1,611 +1,591 @@
 const quizData = [
     {
         id: 1,
-        question: "Mô tả nào về quá trình Site survey là sai?",
+        question: "Số lượng bài toán con trong thuật toán quy hoạch động giải bài toán nhân dãy n ma trận là",
         answers: [
-            "a. Khảo sát để tìm vị trí tối ưu đặt các Access Point và những máy trạm không dây",
-            "b. Sau khi tìm ra vị trí tối ưu cho các Access Point, bước tiếp theo tiếp tục khảo sát để tìm vị trí đặt máy tính cho nhân viên và các thiết bị không dây khác",
-            "c. Thử đặt Access Point tại các vị trí dự kiến, sau đó đo cường độ tín hiệu tại tất cả mọi nơi để tìm ra những điểm không có tín hiệu hoặc tín hiệu bị yếu",
-            "d. Khảo sát để tìm vị trí tối ưu đặt Access Point"
+            "a. n²",
+            "b. log n",
+            "c. n³",
+            "d. n"
         ],
-        correctIndex: 1
-    },
-    {
-        id: 2,
-        image: "2.png",
-        question: "Hình sau mô tả vấn đề nào của môi trường truyền không dây?",
-        answers: [
-            "a. Exposed station problem (Trạm lộ)",
-            "b. Roaming (Chuyển vùng)",
-            "c. Hidden station problem (Trạm ẩn)",
-            "d. Vấn đề khi thực hiện Site survey"
-        ],
+        // Đáp án: n² (bậc O(n²))
         correctIndex: 0 
     },
     {
-        id: 3,
-        question: "Mệnh đề nào mô tả sai về họ chuẩn 802.11?",
+        id: 2,
+        question: "Ta tính tích M = ABCD của bốn ma trận với kích thước d = (17, 23, 5, 3, 46). m₁₃ bằng bao nhiêu?",
         answers: [
-            "a. Chuẩn 802.11n ra đời sau chuẩn 802.11g và có tốc độ truyền cao hơn",
-            "b. Công nghệ SU-MIMO cho phép Access Point giao tiếp đồng thời với nhiều máy trạm",
-            "c. Chuẩn 802.11n sử dụng tần số 2,4 GHz hoặc 5GHz",
-            "d. Công nghệ MIMO cho phép dùng nhiều ăng ten thu và ăng ten phát để truyền đồng thời nhiều luồng dữ liệu"
+            "a. 1955",
+            "b. 2210",
+            "c. 345",
+            "d. 1518"
         ],
-        correctIndex: 1
+        // Đáp án: min(1518, 2210) = 1518
+        correctIndex: 3 
+    },
+    {
+        id: 3,
+        question: "Cho v có k con w₁,...,wₖ. Gọi big(v) là trọng lượng lớn nhất của tập độc lập của cây con có gốc tại v. bignotroot(v) là trọng lượng lớn nhất của tập độc lập không chứa v của cây con có gốc tại v. Công thức tính nào sau đây đúng?",
+        answers: [
+            "a. bignotroot(v) = Σᵢ₌₁ᵏ big(wᵢ)",
+            "b. bignotroot(v) = max { big(v), c(v) + Σᵢ₌₁ᵏ bignotroot(wᵢ) }",
+            "c. big(v) = max { bignotroot(v), c(v) + Σᵢ₌₁ᵏ bignotroot(wᵢ) }",
+            "d. big(v) = Σᵢ₌₁ᵏ bignotroot(wᵢ)"
+        ],
+        // Đáp án: bignotroot(v) = Σ big(wᵢ)
+        correctIndex: 0 
     },
     {
         id: 4,
-        image: "4.png",
-        question: "Mô tả nào về giải pháp kết nối không dây đã được áp dụng trong hình (Customer Application Example) là sai?",
+        question: "Gọi mᵢⱼ là số phép nhân ít nhất cần thực hiện để tính tích ma trận MᵢMᵢ₊₁...Mⱼ. Khi i = j thì mᵢⱼ bằng bao nhiêu?",
         answers: [
-            "a. Là giải pháp hỗn hợp áp dụng cả kết nối hữu tuyến và vô tuyển. Vì vướng đường ô tô nên phải lắp thiết bị thu phát không dây EZ-Bridge LT2 cho tòa nhà A và H1, còn những tòa nhà còn lại (H2, B,C) được nối với tòa nhà chính H1 bằng cáp UTP Cat 5",
-            "b. Vì vướng đường ô tô nên phải lắp thiết bị thu phát không dây EZ-Bridge LT2 cho tòa nhà A và H1",
-            "c. Nhà H1 lắp hai loại thiết bị thu phát không dây: EZ-GO2 và EZ-Bridge LT2",
-            "d. Lắp thiết bị thu phát không dây EZ-GO2 cho các tòa nhà H2, B, C để kết nối với H1"
+            "a. mᵢⱼ = p * q * r",
+            "b. mᵢⱼ = p * r (trong đó ma trận Mᵢ có kích thước p × q và ma trận Mⱼ có kích thước q × r)",
+            "c. mᵢⱼ = 1",
+            "d. mᵢⱼ = 0"
         ],
-        correctIndex: 0
+        // Đáp án: mᵢⱼ = 0 (tích của một ma trận)
+        correctIndex: 3
     },
     {
         id: 5,
-        question: "Những trường hợp thực tế nào không phù hợp để áp dụng môi trường truyền Bluetooth?",
+        question: "Cho cây G. Gọi bignotroot(v) là trọng lượng lớn nhất của tập độc lập của cây con không chứa v có gốc tại v. Bignotroot(C) = ? (Trọng lượng C=12, G=13, F=15)",
+        // Câu hỏi 5 và 6 sử dụng cùng một hình ảnh cây.
+        image: "image_e1f3f1.png",
         answers: [
-            "a. Gửi các mẫu quảng cáo nhỏ từ các pa-nô quảng cáo tới các thiết bị cầm tay của người qua đường",
-            "b. Giao tiếp giữa các thiết bị đo, thiết bị định vị dùng GPS, thiết bị y tế, máy quét mã vạch, và các thiết bị điều khiển giao thông",
-            "c. Kết nối với các thiết bị điều khiển từ xa dành cho thiết bị điện tử gia dụng, ví dụ như thiết bị điều khiển từ xa của tivi",
-            "d. Cung cấp Internet làm việc hàng ngày cho Desktop PC"
+            "a. 25",
+            "b. 12",
+            "c. 28",
+            "d. 40"
         ],
-        correctIndex: 3
+        // Đáp án: big(G) + big(F) = 13 + 15 = 28
+        correctIndex: 2
     },
     {
         id: 6,
-        question: "Mô tả nào về chuẩn 802.11ax là sai?",
+        question: "Cho cây G. Gọi bigroot(v) là trọng lượng lớn nhất của tập độc lập của cây con chứa v có gốc tại v. Bigroot(E) = ? (Trọng lượng E=3, H=7, I=17)",
+        image: "image_e1f394.png",
         answers: [
-            "a. Áp dụng công nghệ MU-MIMO nâng cấp, cho phép 8 luồng cho cả chiều upload và download",
-            "b. Ra đời sau 802.11ac",
-            "c. Còn gọi là chuẩn WiFi 6 (Wifi thế hệ 6)",
-            "d. Thông lượng tối đa 4Gbps"
+            "a. 27",
+            "b. 3",
+            "c. 10",
+            "d. 20"
         ],
-        correctIndex: 3
+        // Đáp án: c(E) + bignotroot(H) + bignotroot(I) = 3 + 0 + 0 = 3
+        correctIndex: 1
     },
     {
         id: 7,
-        question: "Mô tả nào về dải tần số ISM là sai?",
+        question: "Ta tính tích M = ABCD của bốn ma trận với kích thước d = (15, 7, 63, 4, 32). m₃₄ bằng bao nhiêu?",
         answers: [
-            "a. Thiết bị sử dụng tần số ISM phải chấp nhận có thể bị nhiễu từ thiết bị được cơ quan quản lý cho phép hoạt động",
-            "b. Ví dụ về thiết bị sử dụng dải tần ISM là điện thoại cố định không dây sử dụng trong phạm vi gia đình",
-            "c. Thiết bị sử dụng tần số ISM có quyền khởi kiện nếu bị nhiễu từ những thiết bị khác",
-            "d. Người sử dụng không phải xin giấy phép sử dụng tần số do Cục tần số vô tuyến điện cấp"
+            "a. 6615",
+            "b. 1764",
+            "c. 8064",
+            "d. 1845"
         ],
+        // Đáp án: 63 * 4 * 32 = 8064
         correctIndex: 2
     },
     {
         id: 8,
-        question: "Mô tả nào về hình thức truyền qua vệ tinh địa tĩnh là sai?",
+        question: "Lựa chọn công thức đệ quy trong thuật toán quy hoạch động giải bài toán nhân dãy ma trận",
         answers: [
-            "a. Thời gian truyền từ trạm phát tới trạm thu không phụ thuộc vào vị trí của hai trạm này",
-            "b. Khoảng cách từ vệ tinh tới trạm phát và trạm thu là rất lớn so với khoảng cách giữa hai trạm",
-            "c. Thời gian truyền từ trạm phát tới trạm thu là hằng số vì vị trí của trạm phát là không thay đổi",
-            "d. Vệ tinh đứng yên so với mặt đất"
+            "a. m[i, j] = minᵢ ≤ ₖ < ⱼ { m[i, k] + m[k+1, j] + dᵢ₋₁dₖdⱼ } với i < j",
+            "b. m[i, j] = minᵢ ≤ ₖ ≤ ⱼ { m[i, k] + m[k+1, j] + dᵢ₋₁dₖdⱼ } với i < j",
+            "c. m[i, j] = minᵢ < ₖ < ⱼ { m[i, k] + m[k+1, j] + dᵢ₋₁dₖdⱼ } với i < j",
+            "d. m[i, j] = minᵢ < ₖ ≤ ⱼ { m[i, k] + m[k+1, j] + dᵢ₋₁dₖdⱼ } với i < j"
         ],
+        // Đáp án: min i ≤ k < j, sử dụng dᵢ₋₁
         correctIndex: 0
     },
     {
         id: 9,
-        question: "Mệnh đề nào mô tả sai về họ chuẩn 802.11?",
+        question: "hᵢⱼ = k là vị trí đặt dấu ngoặc đầu tiên trong phép nhân ma trận MᵢMᵢ₊₁...Mⱼ để số phép nhân ít nhất là mᵢⱼ. Giả sử đã tính được h₁₄ = 3 thì dấu ngoặc được đặt ở vị trí nào?",
         answers: [
-            "a. Chuẩn 802.11g là sự kết hợp các thông số kỹ thuật của hai chuẩn a và b trước đó",
-            "b. Công nghệ MIMO dùng nhiều ăng-ten thu phát làm tăng tính ổn định của đường truyền, giúp khả năng chịu nhiễu tốt hơn",
-            "c. Tần số 5 GHz thường bị can nhiễu bởi các thiết bị điện tử gia dụng",
-            "d. Công nghệ MIMO dùng nhiều ăng-ten thu phát giúp vùng phủ sóng rộng hơn, khắc phục các vật cản"
+            "a. Sau ma trận thứ 4",
+            "b. Sau ma trận thứ 3",
+            "c. Trước ma trận thứ 3",
+            "d. Sau ma trận thứ 2"
         ],
-        correctIndex: 2
-    },
-    {
-        id: 10,
-        image: "10.png",
-        question: "Mệnh đề nào mô tả sai về vấn đề Trạm lộ?",
-        answers: [
-            "a. Sóng vô tuyến của B không cản trở việc thu tín hiệu của D",
-            "b. Vì hiểu nhầm là đường truyền bận nên C không phát tin tới D",
-            "c. Việc B truyền tin cho A không ảnh hưởng tới việc C phát tin cho D",
-            "d. Trong khi C đang phát tới D thì B bắt đầu muốn truyền cho A"
-        ],
+        // Đáp án: k=3 nghĩa là (M₁M₂M₃) x (M₄)
         correctIndex: 1
     },
     {
-        id: 11,
-        question: "Sau khi máy bay rơi, hộp đen phát tín hiệu bằng sóng tần số thấp vì lý do gì?",
+        id: 10,
+        question: "Phát biểu nào sau đây ĐÚNG VỀ Tập độc lập trên cây (Chọn 2) - Lựa chọn định nghĩa cơ bản.",
         answers: [
-            "a. Tín hiệu có khả năng vượt qua vật cản",
-            "b. Người dân ở gần đó có thể thu được tín hiệu qua radio",
-            "c. Đạt được thông lượng cao",
-            "d. Đạt được băng thông rộng"
+            "a. Tập U ⊆ V được gọi là tập độc lập nếu các đỉnh trong U là đôi một không kề nhau",
+            "b. Tập U ⊆ V được gọi là tập độc lập nếu các đỉnh trong U là đôi một kề nhau",
+            "c. Trọng số của tập độc lập là tổng trọng số của các đỉnh đôi một kề nhau trong tập đó",
+            "d. Trọng số của tập độc lập là tổng trọng số của các đỉnh đôi một không kề nhau trong tập đó"
         ],
-        correctIndex: 0
+        // Đáp án: Định nghĩa cơ bản
+        correctIndex: [0, 3]
+    },
+    {
+        id: 11,
+        question: "Khi xác định cận trên tiệm cận của T(n), chúng ta sử dụng ký pháp",
+        answers: [
+            "a. Ω",
+            "b. ω",
+            "c. O",
+            "d. Θ"
+        ],
+        // Đáp án: Big O (O)
+        correctIndex: 2
     },
     {
         id: 12,
-        question: "Kiến trúc 802.11 tập trung vào 2 tầng nào của mô hình mạng OSI?",
+        question: "Đâu là câu mô tả chính xác về tính đơn trị (Uniqueness) của thuật toán",
         answers: [
-            "a. Tầng Datalink và tầng Transport",
-            "b. Tầng Vật lý và tầng Network",
-            "c. Tầng Liên kết dữ liệu và tầng Giao vận",
-            "d. Tầng Vật lý và tầng con Truy cập đường truyền (MAC) của tầng Datalink"
+            "a. Thuật toán cần phải đưa ra đầu ra sau một số hữu hạn (có thể rất lớn) bước với mỗi đầu vào.",
+            "b. Với mỗi tập dữ liệu đầu vào, thuật toán đưa ra các dữ liệu tương ứng với lời giải của bài toán",
+            "c. Thuật toán có thể áp dụng để giải mọi bài toán có dạng đã cho",
+            "d. Các kết quả trung gian của từng bước thực hiện thuật toán được xác định một cách đơn trị và chỉ phụ thuộc vào đầu vào và các kết quả của các bước trước"
         ],
+        // Đáp án: Tính đơn trị (Determinism)
         correctIndex: 3
     },
     {
         id: 13,
-        question: "Những tín hiệu hoặc ứng dụng nào sau đây không sử dụng sóng vô tuyến tần số thấp, dưới 30 MHz?",
+        question: "Tiệm cận đúng của hàm T(n) = 6n² + n log n là",
         answers: [
-            "a. Hệ thống mạng 4G",
-            "b. Tín hiệu được phản xạ bởi tầng điện ly để vượt khoảng cách hàng ngàn km",
-            "c. Tín hiệu phát đi từ hộp đen máy bay",
-            "d. Truyền tín hiệu vì mục đích cấp cứu, tìm kiếm cứu nạn trên biển"
+            "a. T(n) = Θ(n²)",
+            "b. T(n) = Θ(n)",
+            "c. T(n) = Θ(n log n)",
+            "d. T(n) = Θ(n³)"
         ],
+        // Đáp án: Bậc cao nhất là n²
         correctIndex: 0
     },
     {
         id: 14,
-        image: "14.png",
-        question: "Hình sau mô tả vấn đề nào của môi trường truyền không dây?",
+        question: "Hàm nào sau đây là cận trên tiệm cận của hàm T(n) = 2n² + 3",
         answers: [
-            "a. Trạm ẩn",
-            "b. Trạm lộ",
-            "c. Vấn đề khi thực hiện khảo sát mạng",
-            "d. Chuyển vùng"
+            "a. T(n) = O(n⁴)",
+            "b. T(n) = O(2ⁿ)",
+            "c. T(n) = O(n)",
+            "d. T(n) = O(n log n)",
+            "e. T(n) = O(n²)"
         ],
-        correctIndex: 1
+        // Đáp án: Cận chặt nhất O(n²)
+        correctIndex: 4
     },
     {
         id: 15,
-        question: "Mệnh đề nào mô tả sai về họ chuẩn 802.11?",
+        question: "Tốc độ tăng của hàm T(n) = n! + 4ⁿ + 6 là",
         answers: [
-            "a. Tín hiệu Infrared dễ dàng xuyên hoặc vòng qua các vật cản",
-            "b. Công nghệ MIMO dùng nhiều ăng-ten thu phát làm tăng tính ổn định của đường truyền, giúp khả năng chịu nhiễu tốt hơn",
-            "c. Chuẩn 802.11g là sự kết hợp các thông số kỹ thuật của hai chuẩn a và b trước đó",
-            "d. Công nghệ MIMO dùng nhiều ăng-ten thu phát giúp vùng phủ sóng rộng hơn, khắc phục các vật cản"
+            "a. T(n) = O(1)",
+            "b. T(n) = O(4ⁿ)",
+            "c. T(n) = O(n!)",
+            "d. T(n) = O(n⁴)"
         ],
-        correctIndex: 0
-    },
-    {
-        id: 16,
-        question: "Mệnh đề nào mô tả sai về vấn đề Trạm lộ?",
-        answers: [
-            "a. Việc C phát tin cho D, nếu diễn ra, sẽ không ảnh hưởng tới việc B truyền cho A",
-            "b. Vùng phủ sóng của B không chứa D, vì vậy tín hiệu của B không thể gây ra xung đột tại D",
-            "c. Sóng vô tuyến từ B cản trở việc thu tin hiệu của D, khiến cho tín hiệu từ C bị xung đột",
-            "d. Tín hiệu của B sẽ không gây ra xung đột tại D"
-        ],
+        // Đáp án: Bậc cao nhất là n!
         correctIndex: 2
     },
     {
-        id: 17,
-        question: "Chuẩn Wifi nào có thông lượng là 11Mbps, được ban hành gần như đồng thời với chuẩn 802.11a nhưng tốc độ truyền thấp hơn?",
+        id: 16,
+        question: "Trong sơ đồ khối, khối lựa chọn có nhiệm vụ gì?",
         answers: [
-            "a. 802.11 gốc",
-            "b. 802.11a",
-            "c. 802.11b",
-            "d. 802.11g"
+            "a. Nhập/Xuất dữ liệu",
+            "b. Tùy điều kiện sẽ rẽ nhánh",
+            "c. Chỉ thị bắt đầu và kết thúc",
+            "d. Chỉ hướng thao tác tiếp theo"
         ],
+        // Đáp án: Khối lựa chọn (hình thoi)
+        correctIndex: 1
+    },
+    {
+        id: 17,
+        question: "Đâu là câu mô tả chính xác về tính tổng quát (Generality) của thuật toán",
+        answers: [
+            "a. Các kết quả trung gian của từng bước thực hiện thuật toán được xác định một cách đơn trị và chỉ phụ thuộc vào đầu vào và các kết quả của các bước trước",
+            "b. Với mỗi tập dữ liệu đầu vào, thuật toán đưa ra các dữ liệu tương ứng với lời giải của bài toán",
+            "c. Thuật toán có thể áp dụng để giải mọi bài toán có dạng đã cho",
+            "d. Thuật toán cần phải đưa ra đầu ra sau một số hữu hạn (có thể rất lớn) bước với mỗi đầu vào."
+        ],
+        // Đáp án: Tính tổng quát
         correctIndex: 2
     },
     {
         id: 18,
-        question: "Mô tả nào về những vấn đề của môi trường truyền không dây là sai?",
+        question: "Khi xác định cận dưới tiệm cận của T(n), chúng ta sử dụng ký pháp",
         answers: [
-            "a. Tuy phạm vi phủ sóng Wifi là ba chiều nhưng khi triển khai trong tòa nhà văn phòng thì chỉ còn 2 chiều, hơn nữa tín hiệu bị che bởi các vật cản cố định và không cố định",
-            "b. Dù đã được Site survey kỹ càng, khi vận hành hiệu năng thật sự của WLAN vẫn không ổn định vì tuy AP cố định nhưng vị trí và tình trạng hoạt động của các máy trạm và các thiết bị phát sóng gây nhiễu thì biến đổi",
-            "c. Vùng phủ sóng của AP càng lớn thì số lượng máy trạm kết nối vào càng nhiều, dẫn đến băng thông dành cho mỗi máy trạm càng nhiều",
-            "d. Các AP ở cạnh nhau có thể gây nhiễu lẫn nhau nếu hoạt động ở dải tần số gần nhau"
+            "a. Θ",
+            "b. Ω",
+            "c. ω",
+            "d. O"
         ],
-        correctIndex: 2
-    },
-    {
-        id: 19,
-        question: "Sóng radio thường không được sử dụng theo phương thức truyền nào?",
-        answers: [
-            "a. Broadcast",
-            "b. Quảng bá",
-            "c. Bao trùm",
-            "d. Point to point"
-        ],
-        correctIndex: 3
-    },
-    {
-        id: 20,
-        question: "Mệnh đề nào mô tả sai về họ chuẩn 802.11?",
-        answers: [
-            "a. Công nghệ MIMO của chuẩn 802.11g cho phép dùng nhiều ăng ten để Access Point có thể giao tiếp cùng lúc với nhiều máy trạm, làm giảm thời gian chờ",
-            "b. Chuẩn 802.11n sử dụng tần số 2,4 GHz hoặc 5GHz",
-            "c. Công nghệ MIMO cho phép dùng nhiều ăng ten thu và ăng ten phát để truyền đồng thời nhiều luồng dữ liệu",
-            "d. Công nghệ MIMO bắt đầu xuất hiện từ chuẩn 802.11n"
-        ],
-        correctIndex: 0
-    },
-    {
-        id: 21,
-        question: "Mô tả nào về công nghệ truyền Beamforming là sai?",
-        answers: [
-            "a. Công nghệ truyền Beamforming được triển khai bắt đầu từ chuẩn 802.11ac",
-            "b. Công nghệ truyền Beamforming truyền dữ liệu với tốc độ không đổi, không phụ thuộc vào khoảng cách tới trạm thu",
-            "c. Với Beamforming trạm thu phát (Access Point) có thể bám theo hưởng của trạm thu khi nó di chuyển",
-            "d. Mục đích của beamforming là giảm nhiễu và hỗ trợ công nghệ truyền đa luồng MU-MIMO"
-        ],
+        // Đáp án: Big Omega (Ω)
         correctIndex: 1
     },
     {
-        id: 22,
-        image: "22.png",
-        question: "Sau khi lắp đặt mạng không dây ở trường hợp trong hình (Customer Application Example), cáp mạng sẽ được sử dụng ở đâu?",
+        id: 19,
+        question: "Tốc độ tăng của hàm T(n) = 4ⁿ + 6n² là",
         answers: [
-            "a. Trong nội bộ các tòa nhà",
-            "b. Không ở đâu cả",
-            "c. Cáp mạng sẽ được dùng để kết nối H1 với các tòa nhà còn lại, trừ nhà A",
-            "d. Cáp mạng sẽ được dùng kết nối H1 với H2"
+            "a. T(n) = O(1)",
+            "b. T(n) = O(4ⁿ)",
+            "c. T(n) = O(n!)",
+            "d. T(n) = O(n²)"
         ],
+        // Đáp án: Bậc cao nhất là 4ⁿ
+        correctIndex: 1
+    },
+    {
+        id: 20,
+        question: "Giải công thức đệ quy T(n) = T(5n/8) + 1",
+        answers: [
+            "a. T(n) = O(n log n)",
+            "b. T(n) = O(log n)",
+            "c. T(n) = O(n)",
+            "d. T(n) = O(n² log n)"
+        ],
+        // Áp dụng Master Theorem Case 2: a=1, b=8/5, f(n)=1. n^log_b(a) = n^0 = 1. f(n) = Theta(1). T(n) = Theta(n^0 * log n) = O(log n).
+        correctIndex: 1
+    },
+    {
+        id: 21,
+        question: "Cho công thức đệ quy T(n) = aT(n/b) + c⋅nᵏ. Nếu a = bᵏ thì T(n) được xác định như thế nào?",
+        answers: [
+            "a. T(n) = Θ(nᵏ log n)",
+            "b. T(n) = Θ(n)",
+            "c. T(n) = Θ(n^log_b a)",
+            "d. T(n) = Θ(nᵏ)"
+        ],
+        // Áp dụng Master Theorem Case 2: a = bᵏ => log_b(a) = k. f(n) = Θ(nᵏ). T(n) = Θ(nᵏ log n).
         correctIndex: 0
+    },
+    {
+        id: 22,
+        question: "Giải công thức đệ quy T(n) = 3T(n/4) + 2",
+        answers: [
+            "a. T(n) = O(log n)",
+            "b. T(n) = O(n^log₄ 3)",
+            "c. T(n) = O(n log n)",
+            "d. T(n) = O(n²)"
+        ],
+        // Áp dụng Master Theorem Case 1: a=3, b=4, f(n)=2. n^log₄(3) ≈ n^0.79. f(n) = 2 = O(n^0.79 - ε). T(n) = O(n^log₄ 3).
+        correctIndex: 1
     },
     {
         id: 23,
-        image: "23.png",
-        question: "Access Point trong hình (trên trang 6) hoạt động ở chế độ nào?",
+        question: "Cho công thức đệ quy T(n) = aT(n/b) + f(n). Nếu f(n) = O(n^log_b a - ε) với ε > 0 thì T(n) được xác định như thế nào?",
         answers: [
-            "a. Root mode",
-            "b. Router mode",
-            "c. Bridge mode",
-            "d. Repeater mode"
+            "a. T(n) = Θ(n^log_b a ⋅ log n)",
+            "b. T(n) = Θ(f(n))",
+            "c. T(n) = Θ(n)",
+            "d. T(n) = Θ(n^log_b a)"
         ],
-        correctIndex: 0
+        // Áp dụng Master Theorem Case 1: Chi phí đệ quy chi phối.
+        correctIndex: 3
     },
     {
         id: 24,
-        question: "Trường hợp thực tế nào trong đó kết nối mạng bằng đường truyền hữu tuyến hiệu quả hơn so với đường truyền vô tuyến?",
+        question: "Cho công thức đệ quy T(n) = aT(n/b) + f(n). Nếu f(n) = Θ(n^log_b a) thì T(n) được xác định như thế nào?",
         answers: [
-            "a. Nối mạng cho người dùng đang ở trên các phương tiện giao thông",
-            "b. Kết nối hai máy tính cách nhau bởi một xa lộ",
-            "c. Cung cấp mạng cho các văn phòng, công sở với các vị trí đặt Desktop PC cố định",
-            "d. Cung cấp mạng cho khu vực bị thiên tai, chiến tranh"
+            "a. T(n) = Θ(n)",
+            "b. T(n) = Θ(f(n))",
+            "c. T(n) = Θ(n^log_b a)",
+            "d. T(n) = Θ(n^log_b a ⋅ log n)"
         ],
-        correctIndex: 2
+        // Áp dụng Master Theorem Case 2: Chi phí đệ quy và f(n) cân bằng.
+        correctIndex: 3
     },
     {
         id: 25,
-        question: "Giao thức bảo mật Wifi tốt nhất và được sử dụng rộng rãi nhất trên các thiết bị Wifi hiện nay là ...",
+        question: "Giải công thức đệ quy T(n) = T(n - 2) + 1 nếu n > 0, T(0) = 1",
         answers: [
-            "a. AES",
-            "b. Open WiFi network",
-            "c. WEP",
-            "d. WPA3"
+            "a. T(n) = O(log n)",
+            "b. T(n) = O(n log n)",
+            "c. T(n) = O(n²)",
+            "d. T(n) = O(n)"
         ],
+        // Áp dụng Phép thế lặp: T(n) = T(n - 2k) + k. Dừng khi k = n/2. T(n) = T(0) + n/2 = O(n).
         correctIndex: 3
     },
     {
         id: 26,
-        image: "26.png",
-        question: "Access Point 1 trong hình (trên trang 7) hoạt động ở chế độ nào?",
+        question: "Những thông số cần xác định khi giải công thức đệ quy bằng phương pháp lặp (Chọn 2).",
         answers: [
-            "a. Access Point mode",
-            "b. Repeater mode",
-            "c. Bridge mode",
-            "d. Root mode"
+            "a. Số lần lặp để đạt đến điều kiện đầu",
+            "b. Số hạng phát sinh sau mỗi bước lặp",
+            "c. Số lần thực hiện câu lệnh đặc trưng",
+            "d. Số lần gọi đệ quy"
         ],
-        correctIndex: 2
+        // Đáp án: Cần cả hai để xây dựng công thức tổng quát T(n) = T(n₀) + Σ(chi phí_i).
+        correctIndex: [0, 1] 
     },
     {
         id: 27,
-        question: "Trường hợp thực tế nào trong đó kết nối mạng bằng đường truyền hữu tuyến hiệu quả hơn so với đường truyền vô tuyến?",
+        question: "Giải công thức đệ quy T(n) = 16T(n/4) + n²",
         answers: [
-            "a. Khi lắp mạng LAN cho một công sở đặt tại vị trí gần nguồn nhiễu điện từ lớn, chẳng hạn như cột BTS",
-            "b. Cung cấp mạng cho các công trình kiến trúc cổ, hạn chế sửa chữa động chạm",
-            "c. Cung cấp mạng cho vùng núi non, hải đảo",
-            "d. Cung cấp kết nối mạng tạm thời trong thời gian ngắn"
+            "a. T(n) = O(n)",
+            "b. T(n) = O(log n)",
+            "c. T(n) = O(n log n)",
+            "d. T(n) = O(n² log n)"
         ],
-        correctIndex: 0
+        // Áp dụng Master Theorem Case 2: a=16, b=4. n^log₄(16) = n². f(n) = n². T(n) = O(n² log n).
+        correctIndex: 3
     },
     {
         id: 28,
-        question: "Mô tả nào về việc quản lý và sử dụng các tần số vô tuyến là sai?",
+        question: "Để giải công thức đệ quy bằng phương pháp lặp, ta cần xác định?",
         answers: [
-            "a. Việc lắp đặt các hệ thống Viba vệ tinh luôn phải có giấy phép sử dụng vì tần số nằm trong miền tần số được quản lý",
-            "b. Bất kỳ ai cũng có thể mua và sử dụng những thiết bị thu phát sóng vô tuyến hoạt động ngoài dải tần số ISM mà không cần làm thủ tục đăng ký sử dụng",
-            "c. Tần số vô tuyến cũng là một tài nguyên quốc gia. Giấy phép sử dụng một tần số vô tuyến do Cục tần số vô tuyến điện cấp ghi rõ phạm vi địa lý được phép sử dụng dải tần số đó",
-            "d. Dù đã trả tiền thuê trước đầy đủ nhưng nếu không sử dụng hoặc sử dụng không đúng mục đích đã đăng ký thì nhà cung cấp dịch vụ mạng vẫn sẽ bị thu hồi giấy phép sử dụng tần số vô tuyến"
+            "a. Số lần lặp đạt đến điều kiện n=0",
+            "b. Số lần lặp đạt đến điều kiện n=1",
+            "c. Số lần lặp đạt đến điều kiện đầu tiên",
+            "d. Số lần lặp đạt đến điều kiện n > 0"
         ],
-        correctIndex: 1
-    },
-    {
-        id: 29,
-        question: "Mô tả nào về tên gọi, chức năng và hoạt động của Access Point là sai?",
-        answers: [
-            "a. Hoạt động ở chế độ song công (full-duplex) như switch",
-            "b. Đôi khi AP còn được gọi một cách không chính xác là Điểm truy cập không dây hay Router không dây",
-            "c. Số lượng và vị trí lắp đặt AP cần tính dựa trên số máy trạm đồng thời hòa mạng (số kết nối) và nhu cầu sử dụng mạng của người dùng trong cơ quan",
-            "d. Loại AP hỗ trợ 2 băng tần (2,4GHz và 5 GHz) có thể phục vụ được nhiều máy trạm hơn so với loại chỉ hoạt động ở một băng tần (2,4GHz hoặc 5 GHz)"
-        ],
-        correctIndex: 0
-    },
-    {
-        id: 30,
-        question: "Mệnh đề nào mô tả sai về họ chuẩn 802.11?",
-        answers: [
-            "a. Tần số 5 GHz ít bị can nhiễu bởi các thiết bị điện tử gia dụng",
-            "b. Tín hiệu Infrared dễ bị chặn bởi các vật cản",
-            "c. Chuẩn 802.11g là sự kết hợp các thông số kỹ thuật của hai chuẩn a và b trước đó",
-            "d. Chuẩn 802.11n không tương thích với chuẩn 802.11g trước đó"
-        ],
-        correctIndex: 3
-    },
-        {
-        id: 31,
-        question: "Mô tả nào về những vấn đề của môi trường truyền không dây là sai?",
-        answers: [
-            "a. Đặt cấu hình AP để vùng phủ sóng hẹp sẽ khắc phục tình trạng thiếu cổng kết nối để phục vụ máy trạm, đồng thời làm tăng băng thông dành cho máy trạm",
-            "b. Khi các cell chồng lên nhau, các AP láng giềng không thể dùng cùng tần số nếu không sẽ gây nhiễu lẫn nhau",
-            "c. Các mạng LAN không dây ở vị trí cạnh nhau, cùng thuộc một cơ quan nhưng phục vụ các bộ phận phòng ban khác nhau thì phải được gắn Tên SSID (Service Set Identifier) giống nhau",
-            "d. Mỗi máy trạm chỉ kết nối với 1 Access Point tại mỗi thời điểm"
-        ],
+        // Đáp án: Điều kiện đầu tiên (Base Case) là tổng quát nhất.
         correctIndex: 2
     },
     {
-        id: 32,
-        question: "Đâu không phải là mặt trái hay nhược điểm của mạng không dây?",
+        id: 29,
+        question: "Cho công thức đệ quy T(n) = aT(n/b) + f(n). Nếu f(n) = Ω(n^log_b a + ε) với ε > 0 và thỏa mãn điều kiện điều hòa thì T(n) được xác định như thế nào?",
         answers: [
-            "a. Trong một số trường hợp có thể gây hại cho sức khỏe người dùng",
-            "b. Phù hợp với các triển lãm ngắn ngày, các khu vực vừa bị ảnh hưởng bởi thiên tai",
-            "c. Cường độ tín hiệu bị hạn chế bởi tường, sàn nhà và các vật cản",
-            "d. Tín hiệu bị gây nhiễu bởi các thiết bị điện tử gia dụng như lò vi sóng"
+            "a. T(n) = Θ(n)",
+            "b. T(n) = Θ(f(n))",
+            "c. T(n) = Θ(n^log_b a)",
+            "d. T(n) = Θ(n^log_b a ⋅ log n)"
         ],
+        // Áp dụng Master Theorem Case 3: Chi phí f(n) chi phối.
         correctIndex: 1
+    },
+{
+        id: 30,
+        question: "Giải công thức đệ quy $T(n) = T(n-2) + 1$ nếu $n > 0$, $T(0) = 1$",
+        topic: "Phân tích Đệ quy (Phương pháp Lặp)",
+        answers: [
+            "a. T(n) = O(log n)",
+            "b. T(n) = O(n log n)",
+            "c. T(n) = O(n²)",
+            "d. T(n) = O(n)"
+        ],
+        // Áp dụng Phép thế lặp: T(n) = T(n - 2k) + k. Dừng khi 2k = n (nếu n chẵn), k = n/2. T(n) = T(0) + n/2 = 1 + n/2 = O(n).
+        correctIndex: 3
+    },
+    {
+        id: 31,
+        question: "Giải công thức đệ quy $T(n) = 3T(\\frac{n}{4}) + 2$",
+        topic: "Định lý Thợ (Master Theorem)",
+        answers: [
+            "a. T(n) = O(log n)",
+            "b. T(n) = O(n^2)",
+            "c. T(n) = O(n \\log n)",
+            "d. T(n) = O(n^{\\log_4 3})"
+        ],
+        // Định lý Thợ: a=3, b=4, f(n)=2. n^(log₄3) ≈ n^0.792. Vì f(n)=2=O(n^(log₄3 - ε)) nên là Trường hợp 1. T(n) = O(n^(log₄3)).
+        correctIndex: 3
+    },
+    {
+        id: 32,
+        question: "Công thức đệ quy $T(n) = 3T(n-1) + (n+4) \\cdot 2^n$ có phương trình đặc trưng là gì?",
+        topic: "Phương trình Đặc trưng (Không đồng nhất)",
+        answers: [
+            "a. (r-3)(r-4) = 0",
+            "b. (r-3)(r-2) = 0",
+            "c. (r-3)(r-2)² = 0",
+            "d. (r-3)(r-4)² = 0"
+        ],
+        // Phần đồng nhất (r-3). Phần không đồng nhất f(n) = b^n P(n) với b=2, d=1. Thừa số (r-b)^(d+1) = (r-2)². PTĐTr: (r-3)(r-2)² = 0.
+        correctIndex: 2
     },
     {
         id: 33,
-        question: "So sánh nào giữa sóng tần số thấp và sóng tần số cao là sai?",
+        question: "Công thức đệ quy $T(n) = T(n-1) + 1$ có phương trình đặc trưng là gì?",
+        topic: "Phương trình Đặc trưng (Không đồng nhất)",
         answers: [
-            "a. Sóng tần số thấp thường vượt qua các vật cản tốt hơn sóng tần số cao",
-            "b. Sóng tần số thấp thường có tốc độ truyền dữ liệu thấp hơn sóng tần số cao",
-            "c. Sóng tần số cao thường có độ suy hao trong không khí thấp hơn, do đó khoảng cách truyền xa hơn sóng tần số thấp",
-            "d. Sóng radio có thể phát ngang trên mặt đất (LoS) mà không bị giới hạn bởi đường chân trời"
+            "a. r-1 = 0",
+            "b. (r-1)(r-2) = 0",
+            "c. (r-1)² = 0",
+            "d. (r-1)³ = 0"
         ],
+        // Phần đồng nhất (r-1). Phần không đồng nhất f(n) = 1 = 1^n * 1, có b=1, d=0. Thừa số (r-1)¹ = (r-1). PTĐTr: (r-1)² = 0.
         correctIndex: 2
     },
     {
         id: 34,
-        image: "34.png",
-        question: "Hình vẽ sau đây mô tả về công nghệ wifi nào?",
+        question: "Công thức đệ quy với phương trình đặc trưng $(r+2)^2(r-1) = 0$ thì hàm $T(n)$ được xác định như thế nào?",
+        topic: "Công thức Tổng quát",
         answers: [
-            "a. OFDM",
-            "b. Beamforming",
-            "c. BSS Color",
-            "d. MIMO"
+            "a. T(n) = (\\alpha_1 + \\alpha_2 n) \\cdot (-2)^n + \\alpha_3 \\cdot 1^n",
+            "b. T(n) = \\alpha_1 \\cdot (-2)^n + \\alpha_2 \\cdot 1^n",
+            "c. T(n) = (\\alpha_1 + \\alpha_2 n) \\cdot 2^n + \\alpha_3 \\cdot (-1)^n",
+            "d. T(n) = \\alpha_1 \\cdot 2^n + \\alpha_2 \\cdot (-1)^n"
         ],
-        correctIndex: 3
+        // Nghiệm r₁=-2 (bậc 2) -> (α₁ + α₂n)(-2)ⁿ. Nghiệm r₂=1 (bậc 1) -> α₃(1)ⁿ.
+        correctIndex: 0
     },
     {
         id: 35,
-        question: "Mô tả nào chính xác về tia X?",
+        question: "Công thức đệ quy với phương trình đặc trưng $(r-1)(r-3) = 0$ thì hàm $T(n)$ được xác định như thế nào?",
+        topic: "Công thức Tổng quát",
         answers: [
-            "a. Thuộc loại sóng tần số cỡ THz",
-            "b. Thuộc loại sóng tần số cỡ GHz (Viba), có ứng dụng trong mạng không dây",
-            "c. Thuộc loại sóng tần số cỡ MHz (Radio), có ứng dụng trong mạng không dây",
-            "d. Thuộc loại sóng tần số thấp, dưới 1MHz, không có ứng dụng trong mạng không dây"
+            "a. T(n) = \\alpha_1 \\cdot (1)^n + \\alpha_2 \\cdot (3)^n",
+            "b. T(n) = \\alpha_1 \\cdot (-1)^n + \\alpha_2 \\cdot (3)^n",
+            "c. T(n) = \\alpha_1 \\cdot (-1)^n + \\alpha_2 \\cdot (-3)^n",
+            "d. T(n) = \\alpha_1 \\cdot (1)^n + \\alpha_2 \\cdot (-3)^n"
         ],
+        // Hai nghiệm phân biệt r₁=1 và r₂=3 (bậc 1). Công thức: T(n) = α₁r₁ⁿ + α₂r₂ⁿ.
         correctIndex: 0
     },
     {
         id: 36,
-        image: "36.png",
-        question: "Mệnh đề nào mô tả sai về vấn đề Trạm ẩn?",
+        question: "Công thức đệ quy $T(n) = 2T(n-1) - 2T(n-3) + T(n-4)$ là công thức dạng nào sau đây?",
+        topic: "Phân loại Đệ quy",
         answers: [
-            "a. A và C vẫn tiếp tục truyền mà không biết rằng B không thể thu được tín hiệu của chúng",
-            "b. A và C vẫn tiếp tục truyền mà không biết rằng tín hiệu của chúng bị xung đột",
-            "c. Hai trạm A và C bị ẩn lẫn nhau",
-            "d. Khi thấy tín hiệu phát đi bị xung đột, A sẽ dừng lại không phát tiếp nữa và chờ một khoảng thời gian ngẫu nhiên"
+            "a. Bậc 3, tuyến tính, đồng nhất",
+            "b. Bậc 4, tuyến tính, không đồng nhất",
+            "c. Bậc 4, tuyến tính, đồng nhất",
+            "d. Bậc 3, tuyến tính, không đồng nhất"
         ],
-        correctIndex: 3
+        // Bậc k=n-(n-4)=4. Tuyến tính (bậc 1 với T(.)). Đồng nhất (không có f(n)≠0).
+        correctIndex: 2
     },
     {
         id: 37,
-        image: "37.png",
-        question: "Trước khi sử dụng kết nối không dây giữa hai tòa nhà, hiện trạng của hệ thống mạng trong hình là gì?",
+        question: "Công thức đệ quy $T(n) = T(n-1) + T(n-2) + 2^{n-2}$ là công thức dạng nào sau đây?",
+        topic: "Phân loại Đệ quy",
         answers: [
-            "a. Cả A và B đều có kết nối vào Internet, luồng thông tin giữa 2 tòa nhà được truyền qua Internet nên chất lượng đường truyền không ổn định",
-            "b. Cả A và B đều có kết nối vào Internet, nhưng vướng đường quốc lộ xen giữa nên dữ liệu tử A không truyền được sang B và ngược lại",
-            "c. Cước thuê bao Internet gấp hai lần, đồng thời không chuyển được thông tin từ A sang B",
-            "d. Chỉ B có kết nối vào Internet, còn A không có"
+            "a. Bậc 3, tuyến tính, đồng nhất",
+            "b. Bậc 2, tuyến tính, đồng nhất",
+            "c. Bậc 3, tuyến tính, không đồng nhất",
+            "d. Bậc 2, tuyến tính, không đồng nhất"
         ],
-        correctIndex: 0
+        // Bậc k=n-(n-2)=2. Tuyến tính (bậc 1 với T(.)). Không đồng nhất (f(n)=2^(n-2)≠0).
+        correctIndex: 3
     },
     {
         id: 38,
-        question: "Mô tả nào về dải tần số ISM là sai?",
+        question: "Công thức đệ quy $T(n) = T(n-1) + T(n-2)$ là công thức dạng nào sau đây?",
+        topic: "Phân loại Đệ quy",
         answers: [
-            "a. Viết tắt của Industrial - Scientific - Medical: Công nghiệp - Khoa học - Y tế",
-            "b. Người sử dụng không phải xin giấy phép sử dụng tần số do Cục tần số vô tuyến điện cấp",
-            "c. Thiết bị sử dụng tần số ISM phải chấp nhận có thể bị nhiễu từ thiết bị được cơ quan quản lý cho phép hoạt động",
-            "d. Được sử dụng cho các hệ thống thông tin tầm xa"
+            "a. Bậc 1, không tuyến tính, đồng nhất",
+            "b. Bậc 2, tuyến tính, không đồng nhất",
+            "c. Bậc 1, tuyến tính, đồng nhất",
+            "d. Bậc 2, tuyến tính, đồng nhất"
         ],
+        // Bậc k=n-(n-2)=2. Tuyến tính (bậc 1 với T(.)). Đồng nhất (f(n)=0).
         correctIndex: 3
     },
     {
         id: 39,
-        question: "Kiến trúc 802.11 tập trung vào 2 tầng nào của mô hình mạng OSI?",
+        question: "Phương trình đặc trưng của công thức đệ quy dạng $T(n) = c_1 T(n-1) + c_2 T(n-2) + \\dots + c_k T(n-k)$ là gì?",
+        topic: "Phương trình Đặc trưng (Đồng nhất)",
         answers: [
-            "a. Tầng Vật lý và tầng Network",
-            "b. Tầng Vật lý và tầng Datalink",
-            "c. Tầng Vật lý và tầng Application",
-            "d. Tầng Vật lý và tầng Transport"
-        ],
-        correctIndex: 1
-    },
-    {
-        id: 40,
-        question: "Mệnh đề nào mô tả sai về họ chuẩn 802.11?",
-        answers: [
-            "a. Chuẩn 802.11g là sự kết hợp các thông số kỹ thuật của hai chuẩn a và b trước đó",
-            "b. Tần số 5 GHz ít bị can nhiễu bởi các thiết bị điện tử gia dụng",
-            "c. Tín hiệu Infrared dễ bị chặn bởi các vật cản",
-            "d. Chuẩn 802.11g ra đời sau chuẩn 802.11n và có tốc độ truyền cao hơn"
+            "a. r^k + c_1 r^{k-1} + c_2 r^{k-2} + \\dots + c_k = 0",
+            "b. r^k - c_1 r^{k-1} + c_2 r^{k-2} - \\dots + c_k = 0",
+            "c. r^k + c_1 r^{k-1} - c_2 r^{k-2} + \\dots - c_k = 0",
+            "d. r^k - c_1 r^{k-1} - c_2 r^{k-2} - \\dots - c_k = 0"
         ],
         correctIndex: 3
     },
     {
-        id: 41,
-        question: "Mô tả nào về những vấn đề của môi trường truyền không dây là sai?",
+        id: 40,
+        question: "Phương trình đặc trưng của công thức đệ quy dạng $T(n) = c_1 T(n-1) + \\dots + c_k T(n-k) + b^n p(n)$ là gì? ($d$ là bậc của $p(n)$)",
+        topic: "Phương trình Đặc trưng (Không đồng nhất)",
         answers: [
-            "a. Khi các cell chồng lên nhau, các AP láng giềng không thể dùng cùng tần số nếu không sẽ gây nhiễu lẫn nhau",
-            "b. Đặt cấu hình AP để vùng phủ sóng hẹp sẽ khắc phục tình trạng thiếu cổng kết nối để phục vụ máy trạm, đồng thời làm tăng băng thông dành cho máy trạm",
-            "c. Để có thể roaming các máy trạm phải sử dụng cùng một địa chỉ mạng con (subnet IP)",
-            "d. Khi giảm công suất phát của AP xuống, vùng phủ sóng bị thu hẹp dẫn tới số máy trạm có thể kết nối vào cũng giảm xuống, dẫn đến băng thông dành cho mỗi máy trạm cũng giảm"
+            "a. (r^k - c_1 r^{k-1} - \\dots - c_k) (b - r)^{d+1} = 0",
+            "b. (r^k - c_1 r^{k-1} - \\dots - c_k) (r - b)^d = 0",
+            "c. (r^k - c_1 r^{k-1} - \\dots - c_k) (r - b)^{d+1} = 0",
+            "d. (r^k - c_1 r^{k-1} - \\dots - c_k) (b - r)^d = 0"
         ],
-        correctIndex: 1
+        correctIndex: 2
+    },
+    {
+        id: 41,
+        question: "Cho mảng gồm các phần tử: $-4, 9, -10, 5$. Mảng con lớn nhất của dãy có giá trị là",
+        topic: "Mảng con lớn nhất",
+        answers: [
+            "a. 14",
+            "b. 0",
+            "c. 5",
+            "d. 9"
+        ],
+        // Mảng con lớn nhất là [9] có tổng 9.
+        correctIndex: 3
     },
     {
         id: 42,
-        question: "Mô tả nào về tên gọi, chức năng và hoạt động của Access Point là sai?",
+        question: "Cho mảng gồm các phần tử: $3, -2, 5, -6, -4, 9, -10, 5$. Mảng con lớn nhất đè lên điểm chia có giá trị là (Điểm chia là giữa $A[4]$ và $A[5]$).",
+        topic: "Mảng con lớn nhất (Chia để trị)",
         answers: [
-            "a. Tủ tài liệu lớn bằng kim loại, những thiết bị điện gia dụng như lò vi sóng, tivi, thiết bị điều khiển từ xa đều là những vật cản hoặc gây nhiễu cho tín hiệu Wifi",
-            "b. Hoạt động ở chế độ song công (full-duplex) như switch",
-            "c. Trong khi các chuẩn Wifi tiên tiến như 802.11 ac, 802.11ax không ngừng cải thiện tốc độ truyền dữ liệu thì phạm vi vùng phủ sóng lại hầu như không thay đổi, chỉ vào khoảng 100 foot xung quanh Access Point",
-            "d. Loại AP hỗ trợ 2 băng tần (2,4GHz và 5 GHz) có thể phục vụ được nhiều máy trạm hơn so với loại chỉ hoạt động ở một băng tần (2,4GHz hoặc 5 GHz)"
+            "a. 3",
+            "b. 6",
+            "c. 5",
+            "d. 0"
         ],
-        correctIndex: 1
+        // W_ML (kết thúc tại -6) = 0. W_MR (bắt đầu từ -4) = 5. W_M = 0 + 5 = 5.
+        correctIndex: 2
     },
     {
         id: 43,
-        image: "43.png",
-        question: "Access Point trong hình (trên trang 12) hoạt động ở chế độ nào?",
+        question: "Thao tác chia trong chia để trị thực hiện chia bài toán thành",
+        topic: "Chia để trị",
         answers: [
-            "a. Router mode",
-            "b. Root mode",
-            "c. Repeater mode",
-            "d. Bridge mode"
+            "a. Các bài toán con có kích thước bằng nhau",
+            "b. Các bài toán con độc lập",
+            "c. Các bài toán con giống nhau",
+            "d. Các bài toán con giao nhau"
         ],
         correctIndex: 1
     },
     {
         id: 44,
-        question: "Mô tả nào về dải tần số ISM là sai?",
+        question: "Đâu là câu mô tả chính xác về thao tác trị trong thuật toán chia để trị?",
+        topic: "Chia để trị",
         answers: [
-            "a. Viết tắt của Industrial - Scientific - Medical: Công nghiệp - Khoa học - Y tế",
-            "b. Người sử dụng không phải xin giấy phép sử dụng tần số do Cục tần số vô tuyến điện cấp",
-            "c. Được sử dụng cho các hệ thống thông tin tầm ngắn",
-            "d. Viết tắt của Information - Scientific - Media"
+            "a. Thực hiện việc chia bài toán cần giải ra thành một loạt bài toán con độc lập",
+            "b. Đòi hỏi việc giải các bài toán con thu được",
+            "c. Thực hiện việc xây dựng lời giải của bài toán đặt ra từ các lời giải của bài toán con",
+            "d. Tất cả đều sai"
         ],
-        correctIndex: 3
+        correctIndex: 1
     },
     {
         id: 45,
-        question: "Những tín hiệu hoặc ứng dụng nào sau đây không sử dụng sóng vô tuyến tần số thấp, dưới 30 MHz?",
+        question: "Chia để trị là gì?",
+        topic: "Chia để trị",
         answers: [
-            "a. Mạng WLAN",
-            "b. Tín hiệu được phản xạ bởi tầng điện ly để vượt khoảng cách hàng ngàn km",
-            "c. Truyền tín hiệu vì mục đích cấp cứu, tìm kiếm cứu nạn trên biển",
-            "d. Tín hiệu phát đi từ hộp đen máy bay"
+            "a. Giải bài toán một cách trực tiếp",
+            "b. Chia bài toán cần giải ra thành một loạt bài toán con với kích thước lớn hơn, tiếp đến các bài toán con sẽ được giải một cách độc lập để thu được lời giải của bài toán đặt ra",
+            "c. Chia bài toán cần giải ra thành một loạt bài toán con với kích thước nhỏ hơn, tiếp đến các bài toán con sẽ được giải theo cách giống nhau để thu được lời giải của bài toán đặt ra",
+            "d. Chia bài toán cần giải ra thành một loạt bài toán con với kích thước nhỏ hơn, tiếp đến các bài toán con sẽ được giải một cách độc lập, và cuối cùng tổng hợp các lời giải của bài toán con để thu được lời giải của bài toán đặt ra"
         ],
-        correctIndex: 0
+        correctIndex: 3
     },
-        {
+    {
         id: 46,
-        image: "46.png",
-        question: "Access Point 2 trong hình (trên trang 13) hoạt động ở chế độ nào?",
+        question: "Thuật toán chia để trị giải bài toán mảng con lớn nhất có độ phức tạp là",
+        topic: "Độ phức tạp (Chia để trị)",
         answers: [
-            "a. Root mode",
-            "b. Repeater mode",
-            "c. Bridge mode",
-            "d. Access Point mode"
+            "a. T(n) = O(n³)",
+            "b. T(n) = O(n²)",
+            "c. T(n) = O(n)",
+            "d. T(n) = O(n log n)"
         ],
-        correctIndex: 1
+        // Công thức đệ quy: T(n) = 2T(n/2) + Θ(n). [cite_start]Theo Định lý Thợ: T(n) = Θ(n log n). [cite: 1382, 1383]
+        correctIndex: 3
     },
     {
         id: 47,
-        image: "47.png",
-        question: "Access Point 2 trong hình (trên trang 13, sơ đồ nhà) hoạt động ở chế độ nào?",
+        question: "Khi giải bài toán Mảng con lớn nhất bằng phương pháp chia để trị, nên chia bài toán mảng ban đầu thành các mảng con có đặc điểm như thế nào?",
+        topic: "Chia để trị",
         answers: [
-            "a. Repeater mode",
-            "b. Access Point mode",
-            "c. Root mode",
-            "d. Bridge mode"
-        ],
-        correctIndex: 3
-    },
-    {
-        id: 48,
-        question: "Mệnh đề nào mô tả sai về vấn đề Trạm ẩn?",
-        answers: [
-            "a. Hai trạm A và C bị ẩn lẫn nhau",
-            "b. B không thể thu được tín hiệu của A và C do hiện tượng collision",
-            "c. Tín hiệu từ A và C bị xung đột tại B",
-            "d. Khi thấy tín hiệu phát đi bị xung đột, C sẽ dừng lại không phát tiếp nữa và chờ một khoảng thời gian ngẫu nhiên"
-        ],
-        correctIndex: 3
-    },
-    {
-        id: 49,
-        question: "So sánh nào giữa sóng tần số thấp và sóng tần số cao là sai?",
-        answers: [
-            "a. Một số loại sóng tần số cao có thể phản xạ với tầng điện ly để vượt qua đường chân trời",
-            "b. Một số loại sóng tần số thấp có khả năng xuyên qua lớp nước biển để liên lạc với tàu ngầm",
-            "c. Sóng tần số thấp thường vượt qua các vật cản tốt hơn sóng tần số cao",
-            "d. Sóng tần số thấp thường có tốc độ truyền dữ liệu thấp hơn sóng tần số cao"
+            "a. Hai mảng con có độ dài chênh lệch ít nhất",
+            "b. Hai mảng con luôn có độ dài bằng nhau",
+            "c. Mảng bên trái có độ dài gấp đôi mảng bên phải",
+            "d. Mảng bên phải có độ dài gấp đôi mảng bên trái"
         ],
         correctIndex: 0
     },
-    {
-        id: 50,
-        question: "Đâu không phải là mặt trái hay nhược điểm của mạng không dây?",
-        answers: [
-            "a. Dễ dàng bị can thiệp từ xa",
-            "b. Dễ dàng bị thu trộm từ xa",
-            "c. Băng thông rộng như cáp quang",
-            "d. Dễ dàng bị phá sóng từ xa"
-        ],
-        correctIndex: 2
-    },
-    {
-        id: 51,
-        question: "Ứng dụng Bluezone cảnh báo COVID-19 trên điện thoại sử dụng môi trường truyền Bluetooth vì",
-        answers: [
-            "a. Nếu phát hiện ra một người nhiễm bệnh COVID-19 (F0), dữ liệu của người nhiễm bệnh đó sẽ được Cơ quan Y tế nhập lên hệ thống, từ đó chuyển xuống tất cả các thiết bị",
-            "b. Ứng dụng Bluezone trên máy sẽ so sánh dữ liệu của F0 với lịch sử tiếp xúc được ghi nhận từ trước. Nếu phát hiện đã từng tiếp xúc với F0 trong thời gian đủ dài, hệ thống sẽ báo cho người sử dụng về nguy cơ có thể lây nhiễm bệnh (F1)",
-            "c. Khoảng cách truyền phù hợp với khoảng cách cảnh báo tiếp xúc gần của bệnh COVID-19",
-            "d. Nguyên tắc của Bluezone là bảo mật, ẩn danh và minh bạch. Chỉ cơ quan y tế có thẩm quyền mới biết những người nhiễm và người nghi nhiễm do tiếp xúc gần với người nhiễm COVID-19"
-        ],
-        correctIndex: 2
-    },
-    {
-        id: 52,
-        question: "Mệnh đề nào mô tả sai về chuẩn 802.11b",
-        answers: [
-            "a. Thông lượng tối đa 11 Mbps",
-            "b. Sử dụng tần số 2,4 GHz",
-            "c. Không tương thích với chuẩn 802.11a",
-            "d. Phạm vi tín hiệu kém hơn chuẩn 802.11a"
-        ],
-        correctIndex: 3
-    },
-    {
-        id: 53,
-        question: "Mô tả nào về các giao thức bảo mật của Access Point là sai?",
-        answers: [
-            "a. WPA là giao thức bảo mật được công bố để thay thế cho WEP",
-            "b. Cho tới nay WPA3 chưa bị phát hiện có lỗ hổng bảo mật nào",
-            "c. Cho tới nay WPA3 là giao thức bảo mật Wifi mới nhất và đang được áp dụng rộng rãi nhất",
-            "d. WEP là giao thức bảo mật WiFi được áp dụng sớm nhất"
-        ],
-        correctIndex: 1
-    },
-    {
-        id: 54,
-        question: "Mô tả nào về những vấn đề của môi trường truyền không dây là sai?",
-        answers: [
-            "a. Vùng phủ sóng của AP càng lớn thì số lượng máy trạm kết nối vào càng nhiều, dẫn đến băng thông dành cho mỗi máy trạm càng nhiều",
-            "b. Để có thể roaming các máy trạm phải sử dụng cùng một địa chỉ mạng con (subnet IP)",
-            "c. Khi các cell chồng lên nhau, các AP láng giềng không thể dùng cùng tần số nếu không sẽ gây nhiễu lẫn nhau",
-            "d. Đặt cấu hình AP để vùng phủ sóng hẹp sẽ khắc phục tình trạng thiếu cổng kết nối để phục vụ máy trạm, đồng thời làm tăng băng thông dành cho máy trạm"
-        ],
-        correctIndex: 0
-    }
+
+
+
+
+
+
+
+
+
 ];
-
-
