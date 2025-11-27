@@ -579,13 +579,207 @@ const quizData = [
         ],
         correctIndex: 0
     },
-
-
-
-
-
-
-
-
-
+    {
+        id: 48,
+        question: "Độ phức tạp của thuật toán Karatsuba là bao nhiêu?",
+        topic: "Độ phức tạp (Chia để trị)",
+        answers: [
+            "a. O(n^2)",
+            "b. O(n)",
+            "c. O(n^{\\log_3 2})",
+            "d. O(n^{\\log_2 3})"
+        ],
+        // Công thức đệ quy: T(n) = 3T(n/2) + Θ(n). [cite_start]Theo Định lý Thợ, T(n) = Θ(n^(log₂3)). [cite: 1032, 1082]
+        correctIndex: 3
+    },
+    {
+        id: 49,
+        question: "Karatsuba đã làm như thế nào để nhân 2 số nguyên có n chữ số?",
+        topic: "Chiến lược Karatsuba",
+        answers: [
+            "a. Thực hiện tính 4 phép nhân các số có n/2 chữ số",
+            "b. Thực hiện tính 3 phép nhân các số có n/2 chữ số",
+            "c. Thực hiện tính 4 phép nhân các số có n/3 chữ số",
+            "d. Thực hiện tính 3 phép nhân các số có n/3 chữ số"
+        ],
+        correctIndex: 1
+    },
+    {
+        id: 50,
+        question: "Để thực hiện nhân hai số $2387 \\times 1596$ theo chiến lược chia để trị Karatsuba ($a=23, b=87, c=15, d=96$), khi đó $W = $?",
+        topic: "Chiến lược Karatsuba (Tính toán)",
+        answers: [
+            "a. (23+87) \\times (15+96)",
+            "b. (23+96) \\times (87+15)",
+            "c. 23 \\times 15 + 87 \\times 96",
+            "d. (23+87) \\times (87+15)"
+        ],
+        // Công thức tính W: W = (a+b) x (c+d).
+        correctIndex: 0
+    },
+    {
+        id: 51,
+        question: "Trong các câu sau, câu nào là SAI trong chiến lược chia để trị giải bài toán nhân số nguyên lớn bằng thuật toán Karatsuba?",
+        topic: "Karatsuba so với Chia để trị truyền thống",
+        answers: [
+            "a. Thuật toán Karatsuba có độ phức tạp là O(n^{\\log_2 3})",
+            "b. Nếu n > 1 thì tích của 2 số nguyên có n chữ số có thể biểu diễn qua 3 tích của 4 số nguyên có n/2 chữ số",
+            "c. Việc nhân hai số nguyên có 1 chữ số có thể thực hiện một cách trực tiếp",
+            "d. Để tính kết quả z = x \\times y khi đã biết 4 tích của 4 số nguyên có n/2 chữ số chỉ cần thực hiện các phép cộng và nhân với luỹ thừa của 10"
+        ],
+        correctIndex: 1
+    },
+    {
+        id: 52,
+        question: "Khi thực hiện giải bài toán nhân hai ma trận kích thước $n \\times n$ bằng chiến lược chia để trị Strassen, số phép nhân ma trận kích thước $n/2 \\times n/2$ cần phải thực hiện là bao nhiêu?",
+        topic: "Thuật toán Strassen",
+        answers: [
+            "a. 8",
+            "b. 4",
+            "c. 7",
+            "d. 6"
+        ],
+        correctIndex: 2
+    },
+    {
+        id: 53,
+        question: "Độ phức tạp của thuật toán chia để trị phát triển theo công thức Strassen giải bài toán nhân ma trận là?",
+        topic: "Độ phức tạp (Strassen)",
+        answers: [
+            "a. O(n^2)",
+            "b. O(n)",
+            "c. O(n^{\\log_2 3})",
+            "d. O(n^{\\log_2 7})"
+        ],
+        // Công thức đệ quy: T(n) = 7T(n/2) + O(n²). [cite_start]Theo Định lý Thợ, T(n) = Θ(n^(log₂7)). [cite: 1179]
+        correctIndex: 3
+    },
+    {
+        id: 54,
+        question: "Khi thực hiện nhân hai ma trận kích thước $n \\times n$ theo thuật toán chia để trị Strassen, mỗi ma trận ban đầu được chia thành mấy ma trận con?",
+        topic: "Thuật toán Strassen (Chia)",
+        answers: [
+            "a. 4 ma trận con kích thước n/2",
+            "b. 2 ma trận con kích thước n/2",
+            "c. 4 ma trận con kích thước n/4",
+            "d. 8 ma trận con kích thước n/2"
+        ],
+        correctIndex: 0
+    },
+    {
+        id: 55,
+        question: "Thao tác chia trong chiến lược chia để trị giải bài toán nhân số nguyên lớn bằng thuật toán Karatsuba là?",
+        topic: "Karatsuba (Chia)",
+        answers: [
+            "a. Nếu n > 1 thì tích của 2 số nguyên có n chữ số có thể biểu diễn qua 4 tích của 4 số nguyên có n/2 chữ số",
+            "b. Nếu n > 1 thì tích của 2 số nguyên có n chữ số có thể biểu diễn qua 3 tích của số nguyên có n/2 chữ số",
+            "c. Nếu n > 1 thì tích của 2 số nguyên có n chữ số có thể biểu diễn qua 4 tích của 4 số nguyên có n/3 chữ số",
+            "d. Nếu n > 1 thì tích của 2 số nguyên có n chữ số có thể biểu diễn qua 3 tích của số nguyên có n/3 chữ số"
+        ],
+        // Karatsuba giảm 4 phép nhân thành 3, với kích thước số là n/2.
+        correctIndex: 1
+    },{
+        id: 56,
+        question: "Điểm khác cơ bản của Quy hoạch động với phương pháp Chia để trị là",
+        topic: "So sánh DP và Chia để trị",
+        answers: [
+            "a. Trong cả chia để trị và quy hoạch động, các bài toán con độc lập với nhau. Tuy nhiên kích thước bài toán trong chia để trị sẽ nhỏ hơn",
+            "b. Trong quy hoạch động, các bài toán con độc lập với nhau, còn chia để trị thì không",
+            "c. Trong cả chia để trị và quy hoạch động, các bài toán con độc lập với nhau. Tuy nhiên kích thước bài toán trong quy hoạch động sẽ nhỏ hơn",
+            "d. Trong chia để trị, các bài toán con độc lập với nhau, còn quy hoạch động thì không"
+        ],
+        // Chia để trị: độc lập. Quy hoạch động: trùng lặp/phụ thuộc.
+        correctIndex: 3
+    },
+    {
+        id: 57,
+        question: "Để áp dụng quy hoạch động hiệu quả, bài toán cần có tính chất nào?",
+        topic: "Quy tắc áp dụng DP",
+        answers: [
+            "a. Bài toán lớn có thể chia được thành các bài toán con độc lập",
+            "b. Số lượng các bài toán con phải không quá lớn",
+            "c. Cấu trúc con tối ưu",
+            "d. Số lượng các bài toán con càng lớn càng tốt"
+        ],
+        // Hai tính chất cốt lõi: Cấu trúc con tối ưu và Bài toán con trùng lặp.
+        correctIndex: [1, 2]
+    },
+    {
+        id: 58,
+        question: "Phát biểu nào sau đây ĐÚNG trong thuật toán quy hoạch động (Chọn 3)",
+        topic: "Nguyên tắc của DP",
+        answers: [
+            "a. Bài toán con kích thước nhỏ nhất có thể giải một cách trực tiếp",
+            "b. Lời giải của những bài toán con thường được sử dụng lại rất nhiều lần",
+            "c. Bài toán xuất phát có thể coi là bài toán con có kích thước nhỏ nhất",
+            "d. Bài toán con nhỏ hơn có cùng dạng với bài toán ban đầu"
+        ],
+        // a: Base case. b: Overlapping subproblems. d: Optimal Substructure. c: Sai, bài toán xuất phát là bài toán lớn nhất.
+        correctIndex: [0, 1, 3]
+    },
+    {
+        id: 59,
+        question: "Sơ đồ chung của thuật toán Quy hoạch động gồm những bước nào?",
+        topic: "Quy trình DP",
+        answers: [
+            "a. Phần rã - Ghi nhận lời giải - Tổng hợp lời giải",
+            "b. Chia - Trị - Tổng hợp",
+            "c. Chia - Ghi nhận lời giải - Tổng hợp lời giải",
+            "d. Phần rã - Trị - Tổng hợp"
+        ],
+        // DP: Chia/Phân rã (Divide) -> Ghi nhận (Memoization/Tabulation) -> Tổng hợp (Combine). (b là của Chia để trị).
+        correctIndex: 0
+    },
+    {
+        id: 60,
+        question: "Thuật toán quy hoạch động giải bài toán cái túi (Knapsack Problem) có thời gian tính là",
+        topic: "Độ phức tạp (DP)",
+        answers: [
+            "a. O(nL²)",
+            "b. O(L)",
+            "c. O(n²L)",
+            "d. O(nL)"
+        ],
+        // Độ phức tạp của 0/1 Knapsack là O(n*L), nơi n là số vật phẩm, L là sức chứa.
+        correctIndex: 3
+    },
+    {
+        id: 61,
+        question: "Khi giải bài toán mảng con lớn nhất bằng chiến lược quy hoạch động ($e_i$ là tổng của mảng con lớn nhất kết thúc tại $a_i$): Xét mảng: $[1, -2, 5, 4, -8, 9, 3]$. Giá trị $e_3$ là bao nhiêu?",
+        topic: "DP (Tính toán mảng con lớn nhất)",
+        answers: [
+            "a. 5",
+            "b. -1",
+            "c. 4",
+            "d. 3"
+        ],
+        // e₃ = a₃ + max(0, e₂). e₁=1. e₂=-2+max(0,1) = -1. e₃=5+max(0,-1) = 5.
+        correctIndex: 0
+    },
+    {
+        id: 62,
+        question: "Giai đoạn Phân rã trong phát triển thuật toán dựa trên quy hoạch động là thực hiện việc gì?",
+        topic: "Quy trình DP",
+        answers: [
+            "a. Chia nhỏ bài toán thành các bài toán con có cùng dạng với bài toán ban đầu",
+            "b. Chia nhỏ bài toán thành các bài toán con giao nhau",
+            "c. Chia nhỏ bài toán thành các bài toán con độc lập",
+            "d. Chia nhỏ bài toán thành các bài toán con có kích thước gần bằng nhau"
+        ],
+        // Phân rã (chia) phải tạo ra các bài toán con có cùng cấu trúc (cùng dạng) để thiết lập công thức truy hồi (Cấu trúc con tối ưu).
+        correctIndex: 0
+    },
+    {
+        id: 63,
+        question: "Cho cái túi có dung lượng $L = 5$. Số đồ vật trong túi $n = 4$. (Trọng lượng, Giá trị) của các đồ vật trong cái túi là $(2, 3), (3, 4), (4, 5), (5, 6)$. Ta cần chất những đồ vật nào vào túi để có giá trị lớn nhất?",
+        topic: "Bài toán Cái túi (0/1 Knapsack)",
+        answers: [
+            "a. Vật 3 và Vật 4",
+            "b. Vật 2 và Vật 3",
+            "c. Vật 1 và Vật 4",
+            "d. Vật 1 và Vật 2"
+        ],
+        // Tổ hợp: Vật 1(2, 3) + Vật 2(3, 4) = Trọng lượng 5, Giá trị 7 (Tối đa).
+        correctIndex: 3
+    }
 ];
