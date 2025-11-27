@@ -53,14 +53,12 @@
 
 <div id="quiz-container"></div>
 
-<script src="question.js"></script>
-
-<script src="question.js"></script>
+<script src="question2.js"></script>
 
 <script>
 // Hàm trộn mảng (Fisher-Yates shuffle)
 function shuffleArray(array) {
-    let arr = [...array];
+    let arr = Array.isArray(array) ? [...array] : [];
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -68,46 +66,45 @@ function shuffleArray(array) {
     return arr;
 }
 
-// Render câu hỏi
+// Biến dùng để render (không ghi đè quizData gốc)
+let displayData = [];
+
+// Render câu hỏi (dùng displayData)
 function renderQuiz() {
     const container = document.getElementById("quiz-container");
-    container.innerHTML = ''; // Xóa nội dung cũ
-    
-    quizData.forEach((q, index) => {
-        let html = `
-            <div class="question-box">
-                <b>Câu ${index+1}: ${q.question}</b>
-        `;
+    container.innerHTML = '';
 
-        // Thêm hình ảnh nếu có
+    if (!Array.isArray(displayData) || displayData.length === 0) {
+        container.innerHTML = "<p style='color:red;'>Không có dữ liệu câu hỏi</p>";
+        return;
+    }
+
+    displayData.forEach((q, index) => {
+        const isMulti = Array.isArray(q.correctIndex) && q.correctIndex.length > 1;
+        const needCount = isMulti ? q.correctIndex.length : 1;
+        let html = `<div class="question-box"><b>Câu ${index+1}: ${q.question}</b>`;
+        if (isMulti) html = `<div class="question-box"><b>Câu ${index+1}: ${q.question} <small style="color:#555"> (Chọn ${needCount} đáp án)</small></b>`;
         if (q.image) {
-            html += `<div style="margin: 10px 0;"><img src="${q.image}" style="max-width: 100%; height: auto; border-radius: 6px;" onerror="this.parentElement.innerHTML += '<p style=color:red;>Không tìm thấy: ${q.image}</p>'"></div>`;
+            html += `<div><img src="${q.image}" onerror="this.style.display='none'"></div>`;
         }
-
         html += `<div class="answers">`;
-
         q.answers.forEach((ans, idx) => {
-            const highlight = (idx === q.correctIndex) ? "correct-highlight" : "";
-            html += `
-                <div class="${highlight}" data-correct="${idx === q.correctIndex}">
-                    ${ans}
-                </div>
-            `;
+            // xác định đúng cho cả số nguyên hoặc mảng
+            const isCorrect = Array.isArray(q.correctIndex) ? q.correctIndex.includes(idx) : q.correctIndex === idx;
+            html += `<div data-qid="${q.id ?? index}" data-index="${idx}" data-correct="${isCorrect}">${ans}</div>`;
         });
-
         html += `</div></div>`;
         container.innerHTML += html;
     });
 
-    // Xử lý click
+    // Xử lý click: toggle chọn/huỷ chọn; nếu đúng -> .right, sai -> .wrong
     document.querySelectorAll(".answers div").forEach(el => {
-        el.addEventListener("click", function() {
+        el.addEventListener("click", function () {
+            // nếu đã có trạng thái thì bấm lại để xóa
             if (this.classList.contains("right") || this.classList.contains("wrong")) {
-                this.classList.remove("right");
-                this.classList.remove("wrong");
+                this.classList.remove("right", "wrong");
                 return;
             }
-            
             if (this.dataset.correct === "true") {
                 this.classList.add("right");
             } else {
@@ -117,21 +114,31 @@ function renderQuiz() {
     });
 }
 
-// Nút đánh tráo
+// Nếu quizData hợp lệ, khởi tạo displayData (và trộn nếu muốn)
+if (typeof quizData !== 'undefined' && Array.isArray(quizData)) {
+    // trộn khi vào trang:
+    displayData = shuffleArray(quizData);
+} else {
+    displayData = []; // guard
+}
+renderQuiz();
+
+// Nút đánh tráo (không ghi đè quizData gốc)
 document.getElementById('shuffleBtn').addEventListener('click', function() {
-    quizData = shuffleArray(quizData);
-    renderQuiz();
+    if (Array.isArray(quizData)) {
+        displayData = shuffleArray(quizData);
+        renderQuiz();
+    } else {
+        alert('Không có dữ liệu để đánh tráo.');
+    }
 });
 
-// Nút làm mới
+// Nút làm mới (xóa tất cả lựa chọn)
 document.getElementById('resetBtn').addEventListener('click', function() {
     document.querySelectorAll(".answers div").forEach(el => {
         el.classList.remove("right", "wrong");
     });
 });
-
-// Render lần đầu
-renderQuiz();
 </script>
 
 </body>
