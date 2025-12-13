@@ -1440,6 +1440,308 @@ const quizData = [
         ],
         // Đáp án đúng: Dựa trên dữ liệu và dựa trên từ khóa.
         correctIndex: 2
+    },
+    {
+        id: 121,
+        question: "Điều nào dưới đây là quan trọng nhất để thúc đẩy và duy trì mối quan hệ tốt giữa người kiểm thử và các nhà phát triển?",
+        answers: [
+            "a. Thúc đẩy phần mềm chất lượng tốt hơn bất cứ khi nào có thể.",
+            "b. Xác định các cách khắc phục lỗi tiềm năng cho khách hàng.",
+            "c. Hiểu những gì các nhà quản lý coi trọng về kiểm thử.",
+            "d. Giải thích kết quả kiểm thử một cách trung lập."
+        ],
+        // Đáp án đúng: Giải thích kết quả kiểm thử một cách trung lập.
+        correctIndex: 3
+    },
+    {
+        id: 122,
+        question: "Điều nào dưới đây là mục tiêu chính của kiểm thử phần mềm?",
+        answers: [
+            "a. Để phát hiện và sửa lỗi trước khi phần mềm được phát hành.",
+            "b. Để đảm bảo rằng phần mềm được phát triển nhanh chóng.",
+            "c. Để giảm chi phí phát triển phần mềm.",
+            "d. Để kiểm tra khả năng hoạt động của phần mềm trong mọi điều kiện."
+        ],
+        // Đáp án đúng: Để phát hiện và sửa lỗi trước khi phần mềm được phát hành.
+        correctIndex: 0
+    },
+    {
+        id: 123,
+        question: "Một nhóm kiểm thử liên tục phát hiện một số lượng lớn các lỗi trong quá trình phát triển, bao gồm cả kiểm thử hệ thống. Mặc dù quản lý kiểm thử hiểu rằng đây là việc phát hiện lỗi tốt trong ngân sách của nhóm kiểm thử và trong ngành công nghiệp, nhưng ban giám đốc và các điều hành cấp cao vẫn không hài lòng với nhóm kiểm thử, nói rằng nhóm kiểm thử đã bỏ sót một số lỗi mà người dùng phát hiện sau khi phát hành. Với việc người dùng nói chung hài lòng với hệ thống và các lỗi đã xảy ra chủ yếu là ảnh hưởng thấp, nguyên lý kiểm thử nào dưới đây có khả năng giúp quản lý kiểm thử giải thích cho các quản lý và điều hành tại sao một số lỗi có thể bị bỏ qua?",
+        answers: [
+            "a. Sai lầm không có lỗi.",
+            "b. Kiểm thử toàn diện là không thể.",
+            "c. Nghịch lý thuốc trừ sâu (Pesticide paradox).",
+            "d. Tập trung lỗi."
+        ],
+        // Đáp án đúng: Sai lầm không có lỗi.
+        correctIndex: 0
+    },
+    {
+        id: 124,
+        question: "Một báo cáo lỗi thường bao gồm các thông tin nào?",
+        answers: [
+            "a. Thời gian phát triển và chi phí.",
+            "b. Lịch trình kiểm thử và yêu cầu chức năng.",
+            "c. Tên các nhà phát triển và phân tích thiết kế.",
+            "d. Mô tả lỗi, bước để tái hiện lỗi, và ảnh chụp màn hình nếu có."
+        ],
+        // Đáp án đúng: Mô tả lỗi, bước để tái hiện lỗi, và ảnh chụp màn hình nếu có.
+        correctIndex: 3
+    },
+    {
+        id: 125,
+        question: "Điều nào sau đây KHÔNG phải là một kỹ thuật kiểm thử phần mềm?",
+        answers: [
+            "a. Kiểm thử chức năng.",
+            "b. Kiểm thử ngoại vi.",
+            "c. Kiểm thử phân tích.",
+            "d. Kiểm thử dữ liệu."
+        ],
+        // Đáp án đúng: Kiểm thử ngoại vi.
+        correctIndex: 1
+    },
+    {
+        id: 126,
+        question: "Trong giai đoạn \"Thực hiện kiểm thử,\" nhóm kiểm thử thường thực hiện các hoạt động nào?",
+        answers: [
+            "a. Thiết kế các trường hợp kiểm thử và kịch bản kiểm thử.",
+            "b. Xác minh các yêu cầu và mục tiêu kiểm thử.",
+            "c. Đánh giá các lỗi và cập nhật kế hoạch kiểm thử.",
+            "d. Chạy các trường hợp kiểm thử đã được thiết kế, ghi nhận kết quả và báo cáo lỗi."
+        ],
+        // Đáp án đúng: Chạy các trường hợp kiểm thử đã được thiết kế, ghi nhận kết quả và báo cáo lỗi.
+        correctIndex: 3
+    },
+    {
+        id: 127,
+        question: "Điều nào sau đây là đúng về quy trình kiểm thử các bản sửa lỗi khẩn cấp?",
+        answers: [
+            "a. Chỉ cần chạy lại kiểm thử cho lỗi thực sự đã được sửa.",
+            "b. Luôn chạy kiểm thử hồi quy đầy đủ cho toàn bộ hệ thống trong trường hợp các phần khác của hệ thống bị ảnh hưởng xấu.",
+            "c. Kiểm thử lại khu vực đã thay đổi, sau đó sử dụng đánh giá rủi ro để quyết định một tập hợp hợp lý của toàn bộ kiểm thử hồi quy cần chạy trong trường hợp các phần khác của hệ thống bị ảnh hưởng.",
+            "d. Không có thời gian để kiểm thử thay đổi trước khi triển khai, vì vậy chỉ những nhà phát triển giỏi nhất mới nên thực hiện công việc này và không nên bao gồm kiểm thử viên vì họ sẽ làm chậm quá trình."
+        ],
+        // Đáp án đúng: Kiểm thử lại khu vực đã thay đổi, sau đó sử dụng đánh giá rủi ro để quyết định một tập hợp hợp lý của toàn bộ kiểm thử hồi quy cần chạy trong trường hợp các phần khác của hệ thống bị ảnh hưởng.
+        correctIndex: 2
+    },
+    {
+        id: 128,
+        question: "Những hoạt động chính nào sau đây thuộc quy trình xem xét sản phẩm công việc? 1. Lập kế hoạch. 2. Khởi tạo đánh giá. 3. Chọn người đánh giá. 4. Đánh giá cá nhân. 5. Cuộc họp đánh giá. 6. Đánh giá các phát hiện xem xét so với tiêu chí. 7. Phân tích và truyền thông vấn đề. 8. Sửa lỗi và báo cáo.",
+        answers: [
+            "a. 2, 3, 4, 5, 8.",
+            "b. 1, 2, 3, 5, 7.",
+            "c. 1, 2, 4, 7, 8.",
+            "d. 1, 4, 5, 6, 7."
+        ],
+        // Đáp án đúng: 1, 2, 4, 7, 8. (Các bước chính: Lập kế hoạch, Khởi tạo, Đánh giá cá nhân, Phân tích/Truyền thông vấn đề, Sửa lỗi/Báo cáo)
+        correctIndex: 2
+    },
+    {
+        id: 129,
+        question: "Những tài liệu nào sau đây KHÔNG thể được kiểm tra bằng các kỹ thuật xem xét (review)?",
+        answers: [
+            "a. Mã nguồn phần mềm.",
+            "b. Ý định của người dùng.",
+            "c. Thiết kế kiểm thử.",
+            "d. Câu chuyện người dùng (User story)."
+        ],
+        // Đáp án đúng: Ý định của người dùng. (Review chỉ áp dụng cho sản phẩm công việc hữu hình)
+        correctIndex: 1
+    },
+    {
+        id: 130,
+        question: "Khi nào nên sử dụng kiểm thử tĩnh?",
+        answers: [
+            "a. Ngay từ giai đoạn phát triển yêu cầu.",
+            "b. Chỉ khi kiểm thử động đã thất bại.",
+            "c. Sau khi mã nguồn đã được triển khai.",
+            "d. Khi phần mềm đã sẵn sàng phát hành."
+        ],
+        // Đáp án đúng: Ngay từ giai đoạn phát triển yêu cầu.
+        correctIndex: 0
+    },
+    {
+        id: 131,
+        question: "Phát biểu nào sau đây mô tả đúng về kiểm thử tĩnh?",
+        answers: [
+            "a. Kiểm thử tĩnh có thể bao gồm các cuộc họp đánh giá tài liệu.",
+            "b. Kiểm thử tĩnh không thể phát hiện lỗi bảo mật.",
+            "c. Kiểm thử tĩnh luôn yêu cầu một công cụ tự động.",
+            "d. Kiểm thử tĩnh chỉ bao gồm đánh giá mã nguồn."
+        ],
+        // Đáp án đúng: Kiểm thử tĩnh có thể bao gồm các cuộc họp đánh giá tài liệu.
+        correctIndex: 0
+    },
+    {
+        id: 132,
+        question: "Giá bưu điện cho thư nhẹ là $0.25 cho đến 10g, $0.35 cho đến 50g cộng thêm $0.10 cho mỗi 25g thêm cho đến 100g. Những đầu vào kiểm thử nào (tính bằng gram) sẽ được chọn sử dụng kỹ thuật phân vùng tương đương (EP)?",
+        answers: [
+            "a. 10, 50, 75, 100.",
+            "b. 8, 42, 82, 102.",
+            "c. 5, 20, 40, 60, 80.",
+            "d. 4, 15, 65, 92, 159."
+        ],
+        // Phân vùng: [0, 10], (10, 50], (50, 75], (75, 100], (100, Inf). Giá trị điển hình: 5 (H1), 20 (H2), 60 (H3), 80 (H4). 159 (H5).
+        // Đáp án đúng: 4, 15, 65, 92, 159. (Đây là tập hợp giá trị đại diện cho các phân vùng tương đương, bao gồm cả giá trị không hợp lệ)
+        correctIndex: 3
+    },
+    {
+        id: 133,
+        question: "Loại kiểm thử hộp đen nào tập trung vào hành vi của hệ thống khi các trạng thái khác nhau được kích hoạt?",
+        answers: [
+            "a. Kiểm thử hiệu năng.",
+            "b. Kiểm thử chuyển trạng thái.",
+            "c. Kiểm thử chức năng.",
+            "d. Kiểm thử hồi quy."
+        ],
+        // Đáp án đúng: Kiểm thử chuyển trạng thái.
+        correctIndex: 1
+    },
+    {
+        id: 134,
+        question: "Điều nào sau đây KHÔNG phải là mục tiêu chính của kiểm thử hộp đen?",
+        answers: [
+            "a. Kiểm tra hành vi của hệ thống dựa trên đầu vào và đầu ra.",
+            "b. Phát hiện các lỗi xảy ra khi người dùng sử dụng hệ thống sai cách.",
+            "c. Xác định lỗi dựa trên đặc tả yêu cầu.",
+            "d. Xác định các lỗi trong logic nội bộ của chương trình."
+        ],
+        // Đáp án đúng: Xác định các lỗi trong logic nội bộ của chương trình. (Đây là mục tiêu của kiểm thử hộp trắng)
+        correctIndex: 3
+    },
+    {
+        id: 135,
+        question: "Trong kiểm thử hộp đen, loại lỗi nào dễ bị bỏ sót nếu chỉ sử dụng các trường hợp kiểm thử từ phân vùng tương đương?",
+        answers: [
+            "a. Lỗi biên.",
+            "b. Lỗi thời gian phản hồi.",
+            "c. Lỗi giao diện người dùng.",
+            "d. Lỗi chức năng chính."
+        ],
+        // Đáp án đúng: Lỗi biên. (Cần BVA để phát hiện)
+        correctIndex: 0
+    },
+    {
+        id: 136,
+        question: "Trường hợp kiểm thử nào sau đây phù hợp để kiểm tra chức năng quên mật khẩu trên hệ thống đăng nhập?",
+        answers: [
+            "a. Kiểm tra xem mật khẩu mới có được gửi đến email sau khi yêu cầu đặt lại không.",
+            "b. Nhập tên người dùng và mật khẩu hợp lệ nhưng không sử dụng chức năng quên mật khẩu.",
+            "c. Nhập địa chỉ email không tồn tại và kiểm tra phản hồi của hệ thống.",
+            "d. Đăng nhập thành công mà không cần đặt lại mật khẩu."
+        ],
+        // Đáp án đúng: Nhập địa chỉ email không tồn tại và kiểm tra phản hồi của hệ thống. (Kiểm tra điều kiện không hợp lệ)
+        correctIndex: 2
+    },
+    {
+        id: 137,
+        question: "Khi kiểm thử chức năng đăng nhập, điều nào sau đây KHÔNG phải là một trường hợp kiểm thử hợp lý?",
+        answers: [
+            "a. Nhập tên người dùng đúng nhưng sai mật khẩu, sau đó bấm “Đăng nhập”.",
+            "b. Nhập tên người dùng và mật khẩu dài hơn số ký tự cho phép, sau đó bấm “Đăng ký”.",
+            "c. Để trống cả tên người dùng và mật khẩu, sau đó bấm “Đăng nhập”.",
+            "d. Nhập đúng tên người dùng và mật khẩu, sau đó bấm “Đăng nhập”."
+        ],
+        // Đáp án đúng: Nhập tên người dùng và mật khẩu dài hơn số ký tự cho phép, sau đó bấm “Đăng ký”. (Kiểm thử đăng nhập nhưng bấm nút đăng ký là không hợp lý)
+        correctIndex: 1
+    },
+    {
+        id: 138,
+        question: "Kiểm thử dựa trên chuyển trạng thái (State transition testing) thường được sử dụng để kiểm tra điều gì?",
+        answers: [
+            "a. Chuyển đổi giữa các trạng thái hệ thống dựa trên các đầu vào.",
+            "b. Mã nguồn của hệ thống.",
+            "c. Hiệu suất của hệ thống khi tải cao.",
+            "d. Tốc độ xử lý của các lệnh trong hệ thống."
+        ],
+        // Đáp án đúng: Chuyển đổi giữa các trạng thái hệ thống dựa trên các đầu vào.
+        correctIndex: 0
+    },
+    {
+        id: 139,
+        question: "Tại sao cả hai kỹ thuật kiểm thử hộp đen và hộp trắng đều hữu ích?",
+        answers: [
+            "a. Cả hai đều phát hiện ra cùng loại lỗi.",
+            "b. Bởi vì các đặc tả thường không có cấu trúc.",
+            "c. Chúng phát hiện ra các loại lỗi khác nhau.",
+            "d. Sử dụng nhiều kỹ thuật hơn luôn tốt hơn."
+        ],
+        // Đáp án đúng: Chúng phát hiện ra các loại lỗi khác nhau.
+        correctIndex: 2
+    },
+    {
+        id: 140,
+        question: "Khi sử dụng kỹ thuật kiểm thử bảng quyết định, điều nào sau đây KHÔNG phải là một yếu tố quan trọng cần xem xét?",
+        answers: [
+            "a. Luồng quyết định của hệ thống.",
+            "b. Các kết hợp đầu vào có thể có.",
+            "c. Các kết quả đầu ra có thể có.",
+            "d. Cấu trúc mã của hệ thống."
+        ],
+        // Đáp án đúng: Cấu trúc mã của hệ thống. (Đây là yếu tố hộp trắng)
+        correctIndex: 3
+    },
+    {
+        id: 141,
+        question: "Câu nào sau đây về mối quan hệ giữa độ bao phủ câu lệnh và độ bao phủ quyết định là đúng?",
+        answers: [
+            "a. 100% độ bao phủ câu lệnh luôn có nghĩa là 100% độ bao phủ quyết định.",
+            "b. Đạt 100% độ bao phủ quyết định nếu độ bao phủ câu lệnh lớn hơn 90%.",
+            "c. Đạt 100% độ bao phủ câu lệnh nếu độ bao phủ quyết định lớn hơn 90%.",
+            "d. 100% độ bao phủ quyết định luôn có nghĩa là 100% độ bao phủ câu lệnh."
+        ],
+        // Đáp án đúng: 100% độ bao phủ quyết định luôn có nghĩa là 100% độ bao phủ câu lệnh.
+        correctIndex: 3
+    },
+    {
+        id: 142,
+        question: "Ví dụ nào sau đây là kiểm thử bảng quyết định cho một ứng dụng tài chính, được áp dụng ở mức kiểm thử hệ thống?",
+        answers: [
+            "a. Một bảng chứa các quy tắc cho các ứng dụng thế chấp.",
+            "b. Một bảng chứa các quy tắc cho các giao diện giữa các thành phần.",
+            "c. Một bảng chứa các quy tắc cho số học cơ bản đến hai chữ số thập phân.",
+            "d. Một bảng chứa các quy tắc cho các tổ hợp đầu vào vào hai trường trên màn hình."
+        ],
+        // Đáp án đúng: Một bảng chứa các quy tắc cho các ứng dụng thế chấp. (Quy tắc nghiệp vụ phức tạp ở mức hệ thống)
+        correctIndex: 0
+    },
+    {
+        id: 143,
+        question: "Khi áp dụng kiểm thử hộp đen, điều nào sau đây KHÔNG nên được kiểm tra?",
+        answers: [
+            "a. Các yêu cầu chức năng của hệ thống.",
+            "b. Hành vi của hệ thống khi gặp lỗi đầu vào.",
+            "c. Logic bên trong của mã nguồn.",
+            "d. Các kết quả đầu ra dự kiến của hệ thống."
+        ],
+        // Đáp án đúng: Logic bên trong của mã nguồn. (Đây là kiểm thử hộp trắng)
+        correctIndex: 2
+    },
+    {
+        id: 144,
+        question: "Câu nào sau đây về kiểm thử dựa trên việc tăng độ bao phủ câu lệnh hoặc quyết định là đúng?",
+        answers: [
+            "a. Tăng độ bao phủ câu lệnh có thể tìm ra lỗi mà các kiểm thử khác chưa xét đến cả kết quả đúng và sai.",
+            "b. Tăng độ bao phủ quyết định có thể tìm ra lỗi mà các kiểm thử khác chưa xét đến cả kết quả đúng và sai.",
+            "c. Tăng độ bao phủ quyết định có thể tìm ra lỗi trong mã đã được kiểm thử bởi các kiểm thử khác.",
+            "d. Tăng độ bao phủ câu lệnh có thể tìm ra lỗi trong mã đã được kiểm thử bởi các kiểm thử khác."
+        ],
+        // Đáp án đúng: Tăng độ bao phủ quyết định có thể tìm ra lỗi mà các kiểm thử khác chưa xét đến cả kết quả đúng và sai.
+        correctIndex: 1
+    },
+    {
+        id: 145,
+        question: "Trong kiểm thử chức năng đăng nhập, trường hợp kiểm thử nào sau đây áp dụng kỹ thuật phân tích giá trị biên (Boundary value analysis)?",
+        answers: [
+            "a. Nhập tên người dùng và mật khẩu trùng khớp từ lần đăng nhập trước.",
+            "b. Nhập tên người dùng và mật khẩu ngắn hơn độ dài tối thiểu cho phép.",
+            "c. Nhập tên người dùng với đúng độ dài tối đa cho phép (ví dụ: 20 ký tự) và mật khẩu hợp lệ.",
+            "d. Nhập mật khẩu chỉ có một ký tự và kiểm tra phản hồi của hệ thống."
+        ],
+        // Đáp án đúng: Nhập tên người dùng với đúng độ dài tối đa cho phép (ví dụ: 20 ký tự) và mật khẩu hợp lệ.
+        correctIndex: 2
     }
 ];
+
 
